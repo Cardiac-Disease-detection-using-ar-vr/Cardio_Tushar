@@ -1284,7 +1284,7 @@
       },
       "alpha2_vs_cardio": {
         "type": "scalar_not_per_patient",
-        "note": "Alpha2 is a single model-quality scalar, not a per-patient vector — per-patient correlation is N/A by design",
+        "note": "Alpha2 is a single model-quality scalar, not a per-patient vector \u2014 per-patient correlation is N/A by design",
         "alpha2_scalar_value": 0.637725,
         "interpretation": "Represents overall model performance quality on [0,1] scale"
       },
@@ -1294,7 +1294,7 @@
         "pearson_p": 0.0,
         "spearman_rho": 0.495486,
         "spearman_p": 0.0,
-        "interpretation": "Highest of all three scores — fusion improves discriminability"
+        "interpretation": "Highest of all three scores \u2014 fusion improves discriminability"
       }
     },
     "top5_risk_elevating": [
@@ -630554,3 +630554,4 @@
     }
   ]
 }
+ 
