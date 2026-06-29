@@ -2,7 +2,7 @@
   {
     "idx": 2,
     "true": 2,
-    "pred": 2,
+    "pred": 0,
     "prob": 0.922651,
     "patient_id": "PAT_00003",
     "accuracy": 0.9571,
@@ -126,7 +126,7 @@
   {
     "idx": 5,
     "true": 2,
-    "pred": 2,
+    "pred": 1,
     "prob": 0.83885,
     "patient_id": "PAT_00006",
     "accuracy": 0.9571,
@@ -250,7 +250,7 @@
   {
     "idx": 10,
     "true": 2,
-    "pred": 2,
+    "pred": 1,
     "prob": 0.938428,
     "patient_id": "PAT_00011",
     "accuracy": 0.9571,
@@ -11286,7 +11286,7 @@
   {
     "idx": 685,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.001814,
     "patient_id": "PAT_00686",
     "accuracy": 0.9571,
@@ -11410,7 +11410,7 @@
   {
     "idx": 692,
     "true": 1,
-    "pred": 1,
+    "pred": 0,
     "prob": 0.186011,
     "patient_id": "PAT_00693",
     "accuracy": 0.9571,
@@ -11534,7 +11534,7 @@
   {
     "idx": 700,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.0001,
     "patient_id": "PAT_00701",
     "accuracy": 0.9571,
@@ -11658,7 +11658,7 @@
   {
     "idx": 702,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.088232,
     "patient_id": "PAT_00703",
     "accuracy": 0.9571,
@@ -11782,7 +11782,7 @@
   {
     "idx": 703,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.009018,
     "patient_id": "PAT_00704",
     "accuracy": 0.9571,
@@ -11906,7 +11906,7 @@
   {
     "idx": 713,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.017719,
     "patient_id": "PAT_00714",
     "accuracy": 0.9571,
@@ -12030,7 +12030,7 @@
   {
     "idx": 721,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.029185,
     "patient_id": "PAT_00722",
     "accuracy": 0.9571,
@@ -12154,7 +12154,7 @@
   {
     "idx": 732,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.006938,
     "patient_id": "PAT_00733",
     "accuracy": 0.9571,
@@ -12278,7 +12278,7 @@
   {
     "idx": 736,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.021003,
     "patient_id": "PAT_00737",
     "accuracy": 0.9571,
@@ -12402,7 +12402,7 @@
   {
     "idx": 739,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.101798,
     "patient_id": "PAT_00740",
     "accuracy": 0.9571,
@@ -12526,7 +12526,7 @@
   {
     "idx": 748,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.013507,
     "patient_id": "PAT_00749",
     "accuracy": 0.9571,
@@ -12650,7 +12650,7 @@
   {
     "idx": 764,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.031556,
     "patient_id": "PAT_00765",
     "accuracy": 0.9571,
@@ -12774,7 +12774,7 @@
   {
     "idx": 770,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.057856,
     "patient_id": "PAT_00771",
     "accuracy": 0.9571,
@@ -12898,7 +12898,7 @@
   {
     "idx": 772,
     "true": 0,
-    "pred": 0,
+    "pred": 1,
     "prob": 0.005743,
     "patient_id": "PAT_00773",
     "accuracy": 0.9571,
@@ -13022,7 +13022,7 @@
   {
     "idx": 775,
     "true": 0,
-    "pred": 0,
+    "pred": 2,
     "prob": 0.037977,
     "patient_id": "PAT_00776",
     "accuracy": 0.9571,
@@ -25298,7 +25298,7 @@
   {
     "idx": 1458,
     "true": 1,
-    "pred": 1,
+    "pred": 0,
     "prob": 0.194162,
     "patient_id": "PAT_01459",
     "accuracy": 0.9571,
@@ -25794,7 +25794,7 @@
   {
     "idx": 1489,
     "true": 1,
-    "pred": 1,
+    "pred": 2,
     "prob": 0.168783,
     "patient_id": "PAT_01490",
     "accuracy": 0.9571,

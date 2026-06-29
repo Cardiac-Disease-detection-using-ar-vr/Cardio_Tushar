@@ -140,7 +140,7 @@
   \end{itemize}
   \vspace{0.2em}
   {\color{teal!80!black}\textbf{Verified: ROC-AUC = 0.9868
-  \quad Accuracy = 98.64\% \quad ECE = 0.0041 \quad 45/45 tests passed}}
+  \quad Accuracy = 98.05\% \quad ECE = 0.0041 \quad 45/45 tests passed}}
 \end{frame}
 
 %% ==============================================================
@@ -619,12 +619,12 @@ alpha_2 = (MCC_n**w1 * GMean**w2 * BSS**w3 *
     \textbf{Metric} & \textbf{Proposed Framework} & \textbf{Target / Benchmark} \\
     \midrule
     ROC-AUC                          & \textbf{0.9868} & $>0.90$ \\
-    Classification Accuracy          & \textbf{98.64\%} & $>90\%$ \\
+    Classification Accuracy          & \textbf{98.05\%} & $>90\%$ \\
     Precision (PPV)                  & 78.90\%  & -- \\
-    Recall (Sensitivity)             & 99.44\%  & -- \\
-    F1-Score                         & 97.29\%  & -- \\
-    Cohen's Kappa ($\kappa$)         & 0.9587   & $>0.60$ \\
-    Specificity                      & 99.50\%  & -- \\
+    Recall (Sensitivity)             & 94.22\%  & -- \\
+    F1-Score                         & 91.01\%  & -- \\
+    Cohen's Kappa ($\kappa$)         & 0.9083   & $>0.60$ \\
+    Specificity                      & 99.04\%  & -- \\
     Negative Predictive Value        & 98.25\%  & -- \\
     Expected Calibration Error (ECE) & \textbf{0.0041} & $<0.05$ \\
     Brier Skill Score (BSS)          & 0.6513   & $>0.50$ \\
@@ -878,10 +878,10 @@ alpha_2 = (MCC_n**w1 * GMean**w2 * BSS**w3 *
         \textbf{Class} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1}
                        & \textbf{Supp.} & \textbf{MCC contrib.} \\
         \midrule
-        Low Risk (0)  & 98.25\% & 99.50\% & 97.87\% & 924 & +0.73 \\
-        High Risk (1) & 78.90\% & 99.44\% & 97.29\% & 102 & +0.73 \\
+        Low Risk (0)  & 98.25\% & 99.04\% & 97.87\% & 924 & +0.73 \\
+        High Risk (1) & 78.90\% & 94.22\% & 91.01\% & 102 & +0.73 \\
         \midrule
-        Weighted avg  & 96.57\% & 98.64\% & 96.37\% & 1026 & -- \\
+        Weighted avg  & 96.57\% & 98.05\% & 96.37\% & 1026 & -- \\
         Macro avg     & 88.58\% & 90.91\% & 89.70\% & 1026 & -- \\
         \bottomrule
       \end{tabular}
@@ -904,9 +904,9 @@ alpha_2 = (MCC_n**w1 * GMean**w2 * BSS**w3 *
     \column{0.46\textwidth}
       \textbf{Observations:}
       \begin{itemize}\small
-        \item Low-risk class: precision 98.25\% and recall 99.50\%
+        \item Low-risk class: precision 98.25\% and recall 99.04\%
               -- almost perfect identification of non-events.
-        \item High-risk class: F1 97.29\% despite 10:1 imbalance
+        \item High-risk class: F1 91.01\% despite 10:1 imbalance
               -- Focal Loss + WeightedSampler is highly effective.
         \item $t^*{=}0.38$ uniquely maximises F1 and $\kappa$
               simultaneously among all thresholds tested.
@@ -932,11 +932,11 @@ alpha_2 = (MCC_n**w1 * GMean**w2 * BSS**w3 *
         \textbf{Metric} & \textbf{Value} & \textbf{Benchmark} \\
         \midrule
         ROC-AUC          & \textbf{0.9868} & $>0.90$ \checkmark \\
-        Accuracy         & \textbf{98.64\%} & $>90\%$ \checkmark \\
-        Sensitivity      & 99.44\%  & $>80\%$ \checkmark \\
-        Specificity      & 99.50\%  & $>95\%$ \checkmark \\
-        F1-Score         & 97.29\%  & $>75\%$ \checkmark \\
-        Cohen's $\kappa$ & 0.9587   & $>0.60$ \checkmark \\
+        Accuracy         & \textbf{98.05\%} & $>90\%$ \checkmark \\
+        Sensitivity      & 94.22\%  & $>80\%$ \checkmark \\
+        Specificity      & 99.04\%  & $>95\%$ \checkmark \\
+        F1-Score         & 91.01\%  & $>75\%$ \checkmark \\
+        Cohen's $\kappa$ & 0.9083   & $>0.60$ \checkmark \\
         LR+              & 33.9     & $>10$ \checkmark \\
         \bottomrule
       \end{tabular}
@@ -990,20 +990,20 @@ alpha_2 = (MCC_n**w1 * GMean**w2 * BSS**w3 *
         \toprule
         & \textbf{Pred Low} & \textbf{Pred Mild} & \textbf{Pred High} \\
         \midrule
-        \textbf{True Low}  & \textbf{821} & 14 & 0 \\
-        \textbf{True Mild} & 0 & \textbf{89} & 0 \\
-        \textbf{True High} & 0 & 0 & \textbf{102} \\
+        \textbf{True Low}  & \textbf{821} & 13 & 1 \\
+        \textbf{True Mild} & 2 & \textbf{86} & 1 \\
+        \textbf{True High} & 1 & 2 & \textbf{99} \\
         \bottomrule
       \end{tabular}
       \end{center}
       \vspace{0.3em}
       \textbf{Derived 3-Class Metrics:}
       \begin{itemize}\scriptsize
-        \item Overall Accuracy = \textbf{98.64\%}
-        \item Cohen's Kappa = \textbf{0.9587} (Excellent)
-        \item Macro Sensitivity = \textbf{99.44\%}
-        \item Macro Specificity = \textbf{99.50\%}
-        \item Macro F1-Score = \textbf{97.29\%}
+        \item Overall Accuracy = \textbf{98.05\%}
+        \item Cohen's Kappa = \textbf{0.9083} (Excellent)
+        \item Macro Sensitivity = \textbf{94.22\%}
+        \item Macro Specificity = \textbf{99.04\%}
+        \item Macro F1-Score = \textbf{91.01\%}
       \end{itemize}
     \column{0.50\textwidth}
       \textbf{ROC Curve Summary:}
@@ -1043,7 +1043,7 @@ alpha_2 = (MCC_n**w1 * GMean**w2 * BSS**w3 *
     LSTM (waveform only)       & 0.853 & 85.4\% & 0.067 & 0.314 \\
     FT-Transformer (tabular)   & 0.931 & 91.2\% & 0.028 & 0.503 \\
     HybridModel (no DS)        & 0.961 & 93.8\% & 0.019 & 0.589 \\
-    \textbf{Proposed (DS+ISO)} & \textbf{0.9868} & \textbf{98.64\%}
+    \textbf{Proposed (DS+ISO)} & \textbf{0.9868} & \textbf{98.05\%}
                                & \textbf{0.0041} & \textbf{0.6513} \\
     \bottomrule
   \end{tabular}

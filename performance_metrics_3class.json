@@ -1,82 +1,28 @@
 {
-  "project": "Chronic Cardiovascular Risk Analysis using Wearable Biosensors and Clinical Data",
-  "intern": "Tushar (26SR0001) \u2014 SRIS-INTERN",
-  "version": "v6  \u2014  3-Class Risk Stratification",
-  "test_n": 1026,
-  "class_distribution": {
-    "Low": 835,
-    "Mild": 89,
-    "High": 102
+  "version": "v6_final",
+  "metrics": {
+    "overall_accuracy": 0.980507,
+    "cohen_kappa": 0.908279,
+    "macro_sensitivity": 0.942222,
+    "macro_specificity": 0.9904,
+    "macro_f1_score": 0.887663,
+    "total_patients": 1026
   },
-  "thresholds": {
-    "T1_low_mild": 0.15,
-    "T2_mild_high": 0.38
-  },
-  "confusion_matrix": [
-    [
-      821,
-      14,
-      0
+  "confusion_matrix": {
+    "true_low": [
+      897,
+      13,
+      1
     ],
-    [
-      0,
-      89,
-      0
+    "true_mild": [
+      2,
+      21,
+      1
     ],
-    [
-      0,
-      0,
-      102
+    "true_high": [
+      1,
+      2,
+      88
     ]
-  ],
-  "overall": {
-    "accuracy": 0.9864,
-    "macro_sensitivity": 0.9944,
-    "macro_specificity": 0.995,
-    "macro_f1": 0.9729,
-    "cohen_kappa": 0.9587,
-    "auc_roc_binary": 0.9868,
-    "ece": 0.0041,
-    "brier_skill_score": 0.6513,
-    "flagged_for_review": 39,
-    "pct_flagged": 3.8
-  },
-  "per_class_metrics": {
-    "Low": {
-      "TP": 821,
-      "FP": 0,
-      "FN": 14,
-      "TN": 191,
-      "sensitivity": 0.9832,
-      "specificity": 1.0,
-      "precision": 1.0,
-      "f1_score": 0.9915
-    },
-    "Mild": {
-      "TP": 89,
-      "FP": 14,
-      "FN": 0,
-      "TN": 923,
-      "sensitivity": 1.0,
-      "specificity": 0.9851,
-      "precision": 0.8641,
-      "f1_score": 0.9271
-    },
-    "High": {
-      "TP": 102,
-      "FP": 0,
-      "FN": 0,
-      "TN": 924,
-      "sensitivity": 1.0,
-      "specificity": 1.0,
-      "precision": 1.0,
-      "f1_score": 1.0
-    }
-  },
-  "clinical_meaning": {
-    "Low": "88% of patients \u2014 routine annual monitoring. NPV>99%.",
-    "Mild": "~8.7% of patients \u2014 6-month follow-up. High K indicates uncertainty.",
-    "High": "~10% of patients \u2014 immediate clinical review. Sensitivity matched to catch true risk."
-  },
-  "note_on_mild_class": "The Mild class captures patients in the uncertain intermediate zone (0.15-0.38). These patients have higher local uncertainty u_1 and higher conflict mass K on average. Clinical recommendation: 6-month follow-up and repeat biosensor assessment."
+  }
 }
